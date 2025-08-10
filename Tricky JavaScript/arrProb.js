@@ -1,3 +1,4 @@
+//console.log(v);
 const arrFun = () => arguments.length;
 
 console.log("total args len", arrFun(1, 2, 3));
@@ -145,5 +146,8 @@ console.log(d.findIndex(Number.isNaN));
 
 console.log("************************");
 
-let [a, ...z,] = [1, 2, 3, 4, 5];
+//let [a, ...z,] = [1, 2, 3, 4, 5];
 console.log(a, z);
+
+
+let v = "aish";

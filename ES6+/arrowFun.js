@@ -19,3 +19,8 @@ const person = {
 };
 
 person.sayHello();
+
+
+const z = a => a + 2;
+
+console.log(z)

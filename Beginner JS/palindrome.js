@@ -10,6 +10,7 @@ function isPalindrome(str){
 
 }
 
+
 console.log(isPalindrome("nitin")); // true
 
 console.log(isPalindrome("aish")); // false

@@ -1,4 +1,4 @@
-// Find the longest word
+// Find the longestWord
 
 function longestWord(str) {
 
@@ -10,4 +10,4 @@ function longestWord(str) {
 
 }
 
-console.log(longestWord("Hello word, I am Aish, I am web developer "))
+console.log(longestWord("Hello word, I am Aish, I am web developer "));

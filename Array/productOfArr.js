@@ -5,19 +5,25 @@ function product(arr) {
     let n = arr.length;
     let prefix = 1, sufix = 1;
 
-    let res = new Array(n).fill(1); 
+    let res = new Array(n).fill(1);
+    
+    console.log(res)
   
-
     for(let i = 0; i < n; i++){
         res[i] = prefix;
         prefix *= arr[i];
     }
     
+    console.log("prefix", prefix)
+
+    console.log(res) // [ 1, 1, 2, 6 ] 
    
-    for(let j = n - 1; j >= 0; j --) {
+    for(let j = n - 1; j >= 0; j--) {
         res[j] *= sufix;
         sufix *= arr[j];
     }
+
+     console.log("sufix", sufix)
 
     return res;
 

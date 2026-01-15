@@ -2,23 +2,23 @@
 
 function longestSubstring(str) {
 
-    let charIndex = new Map();
+    let left = 0;
+    let maxLen = 0;
+    let seen = new Map();
 
-    let longest = 0, left = 0;
-    let n = str.length;
+    for(let r = 0; r < str.length; r++) {
+        const ch = str[r];
 
-    for(let right = 0; right < n; right++) {
-        if(charIndex.has(str[right])) {
-            left = Math.max(left, charIndex.get(str[right]) + 1);
+        if(seen.has(ch) && seen.get(ch) >= left) {
+            left = seen.get(ch) + 1;
         }
 
-        charIndex.set(str[right], right);
+        seen.set(ch, r);
 
-        longest = Math.max(longest, right - left + 1)
+        maxLen = Math.max(maxLen, r - left + 1);
     }
-
-    return longest;
-
+   
+    return maxLen;
 }
 
 str = "abcabcbb";

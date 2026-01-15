@@ -48,7 +48,7 @@ class _Heap {
             const l = 2 * i + 1;
             const r = 2 * i + 2;
 
-            if(l < n && this.compare(this.data[i], this.data[best])) best = l;
+            if(l < n && this.compare(this.data[l], this.data[best])) best = l;
             if(r < n && this.compare(this.data[r], this.data[best])) best = r;
 
             if(best !== i) {
@@ -66,7 +66,7 @@ var MedianFinder = function() {
 };
 
 MedianFinder.prototype.addNum = function(num) {
-    if(this.low.size() === 0 || num <= this.low.peek()) this.low.peek(num);
+    if(this.low.size() === 0 || num <= this.low.peek()) this.low.push(num);
     else this.high.push(num);
 
     if(this.low.size() > this.high.size() + 1) {

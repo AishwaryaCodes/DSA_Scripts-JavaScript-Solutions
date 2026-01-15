@@ -3,15 +3,12 @@
 const findPath = (beginWord, wordList, endWord) => {
 
     let wordSet = new Set(wordList);
-
     if(!wordSet.has(endWord)) return 0;
 
     const patterMap = new Map();
-
     let wordLen = beginWord.length;
 
     for(const word of wordList) {
-
         for(let i = 0; i < wordLen; i++) {
             const pattern = word.slice(0, i) + "*" + word.slice(i + 1);
             console.log(pattern);
@@ -23,9 +20,6 @@ const findPath = (beginWord, wordList, endWord) => {
             patterMap.get(pattern).push(word);
         }
     }
-
-
-    console.log(patterMap);
 
      const queue = [[beginWord, 1]];
      const visited = new Set([beginWord]);
